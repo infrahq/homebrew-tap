@@ -11,22 +11,22 @@ class Infra < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://s3.us-east-2.amazonaws.com/releases.infrahq.com/infra/v0.0.6-test/infra_0.0.6-test_darwin_x86_64.zip"
-      sha256 "181dde9987e756614b085fc69e4531e1b578c97e4c453c42e22ca52922be21fc"
+      sha256 "1b379e0cba8f72f082b3c54d41de5928328a59e99450747c4fa2863c2095311a"
     end
     if Hardware::CPU.arm?
       url "https://s3.us-east-2.amazonaws.com/releases.infrahq.com/infra/v0.0.6-test/infra_0.0.6-test_darwin_arm64.zip"
-      sha256 "f03fe0b1c618ad5ccc423d6cb26e858adbd3f6a11ffad950f92ebc70ae9e8a1b"
+      sha256 "e8a2dc1f2556448ee02f468074055d5d9b69589ae0a96e24e41dcd6c57f3fc58"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
       url "https://s3.us-east-2.amazonaws.com/releases.infrahq.com/infra/v0.0.6-test/infra_0.0.6-test_linux_x86_64.zip"
-      sha256 "f8c420ccdb1f6228992781a919aab42d521f79a7c189edad57fe384ce6933cb4"
+      sha256 "ac90cdae40359adfd4d90623b9957d2856b6bd94a5a00c962068487483d94124"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://s3.us-east-2.amazonaws.com/releases.infrahq.com/infra/v0.0.6-test/infra_0.0.6-test_linux_arm64.zip"
-      sha256 "78704206d9a39be5ba71cf9e716aa88180eb65980f38eae12fed65eca0296cf1"
+      sha256 "6fd3f04ec61bb0179eee323a96748da3a8c14564e3ac9645ca2b7ed8c8b72f0b"
     end
   end
 
