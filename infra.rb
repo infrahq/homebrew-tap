@@ -11,22 +11,22 @@ class Infra < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://releases.infrahq.com/infra/v0.0.13/infra_0.0.13_darwin_x86_64.zip"
-      sha256 "1fce40251fbb662384685fcfdf555433c8bfee7e2d698269a78f4fea1a67ca2b"
+      sha256 "912b09cfefaa9049203461649105ceb23071cf15101771fb2226b748c5548b49"
     end
     if Hardware::CPU.arm?
       url "https://releases.infrahq.com/infra/v0.0.13/infra_0.0.13_darwin_arm64.zip"
-      sha256 "aa976a1f94dde987b47739f2848b6fde81898c20b4625c23999efced0dad0ba2"
+      sha256 "cab84de161f7b45aed93ee53684d68e158a319f22596aface142d11891c9aadd"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
       url "https://releases.infrahq.com/infra/v0.0.13/infra_0.0.13_linux_x86_64.zip"
-      sha256 "714e99c69e531e0525b290adcf37ec159e1e14e69d8a199f5ecfbb77e1b6e90e"
+      sha256 "3af0607116ce04a463d9f8604b1d41db1b66751dbb8a8003ede5b00e8ca3d94f"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://releases.infrahq.com/infra/v0.0.13/infra_0.0.13_linux_arm64.zip"
-      sha256 "e465d0fce17b6e8fff0e394d1323a3e4ee5154b598862b362503ddcd4ca209b4"
+      sha256 "3a3923a5ff21d431b1af8b2dcedd0a66531c0e2717ea32da50173b9aac44c6c5"
     end
   end
 
