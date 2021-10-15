@@ -5,28 +5,28 @@
 class Infra < Formula
   desc "Infra"
   homepage "https://infrahq.com"
-  version "0.3.1"
+  version "0.3.2"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://releases.infrahq.com/infra/v0.3.1/infra_0.3.1_darwin_x86_64.zip"
-      sha256 "291e577bcdcf25a31b9853059c0809da98efa2bf1ab126c89488b2fd13cce85a"
+      url "https://releases.infrahq.com/infra/v0.3.2/infra_0.3.2_darwin_x86_64.zip"
+      sha256 "f5333c441105b7a6073af571ad3345e479bf9bbe963c01a3453c817896b5e226"
     end
     if Hardware::CPU.arm?
-      url "https://releases.infrahq.com/infra/v0.3.1/infra_0.3.1_darwin_arm64.zip"
-      sha256 "bf247e0bcbacc0a202517c5c0f2ea6862e50532a999f6177c4e12b5a5cc9db3e"
+      url "https://releases.infrahq.com/infra/v0.3.2/infra_0.3.2_darwin_arm64.zip"
+      sha256 "60ad05caadfd2406cdc33104fe462f2dfa7693ede3f0697b4d55c9099fed4036"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://releases.infrahq.com/infra/v0.3.1/infra_0.3.1_linux_x86_64.zip"
-      sha256 "3729b00ad6e3e696c99143589c950e35db4e751203f3cc253b4c5b194621efda"
+      url "https://releases.infrahq.com/infra/v0.3.2/infra_0.3.2_linux_x86_64.zip"
+      sha256 "3eb0d19a8bf49315fa5db9a3a21b260c0304059652f7491d83b6314e8210d95d"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://releases.infrahq.com/infra/v0.3.1/infra_0.3.1_linux_arm64.zip"
-      sha256 "cd12790e2acc03f4866e9ef288dc98e00f856217ed9f2e0a15751190b904266b"
+      url "https://releases.infrahq.com/infra/v0.3.2/infra_0.3.2_linux_arm64.zip"
+      sha256 "b02b306587da6ec80c1ecc4fbedf8d241eff10963cd22f92790b7b96b809d40e"
     end
   end
 
