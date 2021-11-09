@@ -5,20 +5,20 @@
 class Infra < Formula
   desc "Infra"
   homepage "https://infrahq.com"
-  version "0.4.7"
+  version "0.4.8"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://releases.infrahq.com/infra/v0.4.7/infra_0.4.7_darwin_arm64.zip"
-      sha256 "4064bb26621236f01189bfbd64266703b67c0feea7b2d27e585a3234c1edb85c"
+    if Hardware::CPU.intel?
+      url "https://releases.infrahq.com/infra/v0.4.8/infra_0.4.8_darwin_x86_64.zip"
+      sha256 "7ff7c955089661b68009a744985f539381751796b27050130440c18fd51488da"
 
       def install
         bin.install "infra"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://releases.infrahq.com/infra/v0.4.7/infra_0.4.7_darwin_x86_64.zip"
-      sha256 "fa584586586c2b90768a6add15a5a3ed5f031dcc5b177bd1da6356adc64a7009"
+    if Hardware::CPU.arm?
+      url "https://releases.infrahq.com/infra/v0.4.8/infra_0.4.8_darwin_arm64.zip"
+      sha256 "94339baecb75ba673550a01e35f2c8d9429784d73de416623030c65a77d770d1"
 
       def install
         bin.install "infra"
@@ -27,17 +27,17 @@ class Infra < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://releases.infrahq.com/infra/v0.4.7/infra_0.4.7_linux_arm64.zip"
-      sha256 "39d9d7b0fa9d31a275f1a4749042c506c324fa8628f4b8bebe8bf9478a96bd11"
+    if Hardware::CPU.intel?
+      url "https://releases.infrahq.com/infra/v0.4.8/infra_0.4.8_linux_x86_64.zip"
+      sha256 "31375552d68bfbb683d1cf75e6b4c3ed245639327c5c408a0ceddf612b60d353"
 
       def install
         bin.install "infra"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://releases.infrahq.com/infra/v0.4.7/infra_0.4.7_linux_x86_64.zip"
-      sha256 "94c16b59a82843fc275cda70301e6cc313fe17eeca3f5b382dbbf350df39be7e"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://releases.infrahq.com/infra/v0.4.8/infra_0.4.8_linux_arm64.zip"
+      sha256 "6c65e0e061f0aa3e2a436701fdf95f83dad0da741aa723fa1b6afd7042b063ce"
 
       def install
         bin.install "infra"
