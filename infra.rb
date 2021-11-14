@@ -5,20 +5,20 @@
 class Infra < Formula
   desc "Infra"
   homepage "https://infrahq.com"
-  version "0.4.9"
+  version "0.4.10"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://releases.infrahq.com/infra/v0.4.9/infra_0.4.9_darwin_x86_64.zip"
-      sha256 "b2b2278860e08efb02dd0760e5f0b4c7a05e0b2549587f092ba8feaee58ce1dd"
+    if Hardware::CPU.arm?
+      url "https://releases.infrahq.com/infra/v0.4.10/infra_0.4.10_darwin_arm64.zip"
+      sha256 "6813bc1e1954975c074a04ed8f1139d9b8965bff3cc60544c8f241ddea787aaa"
 
       def install
         bin.install "infra"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://releases.infrahq.com/infra/v0.4.9/infra_0.4.9_darwin_arm64.zip"
-      sha256 "22bdd8591a28a08c9ac3daab19a3b54b8dc499d924ab21d7965bacfa64ce1b20"
+    if Hardware::CPU.intel?
+      url "https://releases.infrahq.com/infra/v0.4.10/infra_0.4.10_darwin_x86_64.zip"
+      sha256 "0a284f48e879cd7ddd14fae77480b00cba12888f379b46c45e822a1f200531e5"
 
       def install
         bin.install "infra"
@@ -27,17 +27,17 @@ class Infra < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://releases.infrahq.com/infra/v0.4.9/infra_0.4.9_linux_x86_64.zip"
-      sha256 "226d9513e2e015defb278989799b190dcdcf7c602fc4825e2340de3392a0b9cf"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://releases.infrahq.com/infra/v0.4.10/infra_0.4.10_linux_arm64.zip"
+      sha256 "544bc3f155be2279f868025a856adb7677559fbf6feb30a2549be932f1eec34a"
 
       def install
         bin.install "infra"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://releases.infrahq.com/infra/v0.4.9/infra_0.4.9_linux_arm64.zip"
-      sha256 "8ce169f42e74d078e6f825651c30d50cc99b9bd4526b75c7c37b567f20999a9f"
+    if Hardware::CPU.intel?
+      url "https://releases.infrahq.com/infra/v0.4.10/infra_0.4.10_linux_x86_64.zip"
+      sha256 "1f9bccdcd47d9ef47e46139ba1db7453a8446b2db229584bb3ed658372d35ef2"
 
       def install
         bin.install "infra"
