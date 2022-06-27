@@ -5,20 +5,20 @@
 class Infra < Formula
   desc "Infra"
   homepage "https://infrahq.com"
-  version "0.13.4"
+  version "0.13.5"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://releases.infrahq.com/infra/v0.13.4/infra_0.13.4_darwin_arm64.zip"
-      sha256 "16e1d4ef7f8509b452af21a8e0baeba34dbabd14bb137efc990b6ed967b5ee76"
+    if Hardware::CPU.intel?
+      url "https://releases.infrahq.com/infra/v0.13.5/infra_0.13.5_darwin_x86_64.zip"
+      sha256 "a9b36ec13e3ebeea5b0e5d18d6e6e8d36a9d5d7a90b53ba74410d84550926795"
 
       def install
         bin.install "infra"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://releases.infrahq.com/infra/v0.13.4/infra_0.13.4_darwin_x86_64.zip"
-      sha256 "88a88bc192c16573742be889bee4a852fc46d2b7d24e04ed3156b500fad8b3c9"
+    if Hardware::CPU.arm?
+      url "https://releases.infrahq.com/infra/v0.13.5/infra_0.13.5_darwin_arm64.zip"
+      sha256 "618fa1e9894f71cdafb433bc12592204a8a44beb00d6ab63d59e9d286ccb1b82"
 
       def install
         bin.install "infra"
@@ -27,17 +27,17 @@ class Infra < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://releases.infrahq.com/infra/v0.13.4/infra_0.13.4_linux_x86_64.zip"
-      sha256 "96d2a80c5d8f50dff7dd090f301d75456293205cfb0a7725070d5227b279317c"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://releases.infrahq.com/infra/v0.13.5/infra_0.13.5_linux_arm64.zip"
+      sha256 "ab6d39657c2a1996a3ddd0cb96e972ab1887388cba987d264206425a38892632"
 
       def install
         bin.install "infra"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://releases.infrahq.com/infra/v0.13.4/infra_0.13.4_linux_arm64.zip"
-      sha256 "995b32f7dded2c11f776150f0e7a96bacac913ed178de0c58d5e1ab3673ec275"
+    if Hardware::CPU.intel?
+      url "https://releases.infrahq.com/infra/v0.13.5/infra_0.13.5_linux_x86_64.zip"
+      sha256 "c700585a7b638241e2c02d22c1ba6b4be97934d3b801bf92d22944110419fd29"
 
       def install
         bin.install "infra"
