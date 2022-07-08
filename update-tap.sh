@@ -25,7 +25,7 @@ CHECKSUMS=$(mktemp)
 cleanup() { rm $CHECKSUMS; }
 trap cleanup 0
 
-curl -o$CHECKSUMS -fs $BASE_URL/v$NEW_VERSION/infra-checksums.txt
+curl -o$CHECKSUMS -fsSL $BASE_URL/v$NEW_VERSION/infra-checksums.txt
 
 RECIPE=infra
 PART=${NEW_VERSION##*-}
