@@ -5,20 +5,20 @@
 class Infra < Formula
   desc "Infra"
   homepage "https://infrahq.com"
-  version "0.13.6"
+  version "0.14.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://releases.infrahq.com/infra/v0.13.6/infra_0.13.6_darwin_x86_64.zip"
-      sha256 "e67d73f19a574cd1a19500b40ac52684397901a52bbcbaf225cd09908612a36b"
+      url "https://releases.infrahq.com/infra/v0.14.0/infra_0.14.0_darwin_x86_64.zip"
+      sha256 "d1e9944a0ce1cf4576339a9fe46d91c13bc24e99353e92399809c3b93fe4b7ad"
 
       def install
         bin.install "infra"
       end
     end
     if Hardware::CPU.arm?
-      url "https://releases.infrahq.com/infra/v0.13.6/infra_0.13.6_darwin_arm64.zip"
-      sha256 "5f588b99d4d6faab5967872ee1c760f2a9374a468342666f01ea792bfc7cfa6c"
+      url "https://releases.infrahq.com/infra/v0.14.0/infra_0.14.0_darwin_arm64.zip"
+      sha256 "d7391db46d7063b4825475d227538138f050bedfcb275eeb0b889f2a8928b28a"
 
       def install
         bin.install "infra"
@@ -28,16 +28,16 @@ class Infra < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://releases.infrahq.com/infra/v0.13.6/infra_0.13.6_linux_arm64.zip"
-      sha256 "e874ea3037f25917254854ddb48a3b258260de4ba7a95690af3b62a5564c97c8"
+      url "https://releases.infrahq.com/infra/v0.14.0/infra_0.14.0_linux_arm64.zip"
+      sha256 "a3e7711f48252454020ec803b564a52291e4dfc241560066892aa91a76121f31"
 
       def install
         bin.install "infra"
       end
     end
     if Hardware::CPU.intel?
-      url "https://releases.infrahq.com/infra/v0.13.6/infra_0.13.6_linux_x86_64.zip"
-      sha256 "154b251c9909a6d5accb6ebd8cc16fe19190cccd236864f93b9deb2e851fed41"
+      url "https://releases.infrahq.com/infra/v0.14.0/infra_0.14.0_linux_x86_64.zip"
+      sha256 "faadb67909677ab5da13e9ec09e88e5f634e6aac8f9403f8844db5751d8f06d0"
 
       def install
         bin.install "infra"
