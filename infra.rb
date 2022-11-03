@@ -1,12 +1,12 @@
 class Infra < Formula
   desc "Infra"
   homepage "https://infrahq.com"
-  version "0.16.0"
+  version "0.16.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/infrahq/infra/releases/download/v0.16.0/infra_0.16.0_darwin_x86_64.zip"
-      sha256 "a4ce10391b1fcdcdadf045d25c9ae077416e98ba29eaa0db7c206fbb081ea350"
+      url "https://github.com/infrahq/infra/releases/download/v0.16.1/infra_0.16.1_darwin_x86_64.zip"
+      sha256 "8a6fc2a55639ca26137dbde44ecb98e7fc2481ca869ec78c6ea1c477497b7cf4"
 
       def install
         bin.install "infra"
@@ -19,8 +19,8 @@ class Infra < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/infrahq/infra/releases/download/v0.16.0/infra_0.16.0_darwin_arm64.zip"
-      sha256 "1a53304ecc4a51c9c60d199532f518f0fb4aad75ca8e6496c94e5a2cc49f3b8d"
+      url "https://github.com/infrahq/infra/releases/download/v0.16.1/infra_0.16.1_darwin_arm64.zip"
+      sha256 "37fe272d5ec37d9dadeb2ba42d2c5a6d966d6bf8fbb5df8dbcd9363b27c74f30"
 
       def install
         bin.install "infra"
@@ -36,8 +36,8 @@ class Infra < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/infrahq/infra/releases/download/v0.16.0/infra_0.16.0_linux_arm64.zip"
-      sha256 "4c91b5cc6992657ce60a2608de997fb5c264decb00bfe6c54f29c764ad605dd9"
+      url "https://github.com/infrahq/infra/releases/download/v0.16.1/infra_0.16.1_linux_arm64.zip"
+      sha256 "ee38ab342c90f1669f0e9e7c976b3a32934d95473aecd385fef572e1daec00a2"
 
       def install
         bin.install "infra"
@@ -50,8 +50,8 @@ class Infra < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/infrahq/infra/releases/download/v0.16.0/infra_0.16.0_linux_x86_64.zip"
-      sha256 "3d523a04105c823ba452aaccdc6e84a72cceb57f1cb1df13d7d401c9a45d98db"
+      url "https://github.com/infrahq/infra/releases/download/v0.16.1/infra_0.16.1_linux_x86_64.zip"
+      sha256 "237b91951f2352f90d47dbb34be175011a643ed255911a92f846b91acf2d56cb"
 
       def install
         bin.install "infra"
